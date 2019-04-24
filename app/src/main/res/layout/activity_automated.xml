@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@mipmap/back"
+    android:layout_height="match_parent"
+    tools:context=".AutomatedActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CHOOSE FROM THE"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="LIST BELOW"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/dns_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:padding="15dp"
+            android:background="@drawable/whiteback"
+            android:text="DNS"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/apache_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:padding="15dp"
+            android:background="@drawable/whiteback"
+            android:text="APACHE"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/maria_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:padding="15dp"
+            android:background="@drawable/blackback"
+            android:text="MARIA DB"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/yum_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:padding="15dp"
+            android:background="@drawable/blackback"
+            android:text="YUM"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/samba_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:padding="15dp"
+            android:background="@drawable/blackback"
+            android:text="SAMBA"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/nfs_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:padding="15dp"
+            android:background="@drawable/blackback"
+            android:text="NFS"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="24sp" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

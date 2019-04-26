@@ -31,10 +31,8 @@ public class AutomatedScriptActivity extends AppCompatActivity {
         mOk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                onBackPressed();
             }
         });
-
-
     }
 }

@@ -6,14 +6,22 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class AutomatedActivity extends AppCompatActivity {
 
     Button mDns,mApache,mMaria,mYum,mSamba,mNfs;
+
+    DatabaseReference mDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_automated);
+
+        mDatabase = FirebaseDatabase.getInstance().getReference();
 
         mDns = findViewById(R.id.dns_btn);
         mApache = findViewById(R.id.apache_btn);
@@ -26,10 +34,15 @@ public class AutomatedActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(AutomatedActivity.this,AutomatedScriptActivity.class);
-                intent.putExtra("title","DNS");
-                intent.putExtra("script","systemctl start dns.service");
-                startActivity(intent);
+                mDatabase.child("Dns").child("input").setValue("done").addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Intent intent = new Intent(AutomatedActivity.this,AutomatedScriptActivity.class);
+                        intent.putExtra("title","DNS");
+                        intent.putExtra("script","systemctl start dns.service");
+                        startActivity(intent);
+                    }
+                });
 
             }
         });
@@ -37,50 +50,75 @@ public class AutomatedActivity extends AppCompatActivity {
         mApache.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AutomatedActivity.this,AutomatedScriptActivity.class);
-                intent.putExtra("title","APACHE");
-                intent.putExtra("script","systemctl start dns.service");
-                startActivity(intent);
+                mDatabase.child("Apache").child("input").setValue("done").addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Intent intent = new Intent(AutomatedActivity.this,AutomatedScriptActivity.class);
+                        intent.putExtra("title","Apache");
+                        intent.putExtra("script","systemctl start dns.service");
+                        startActivity(intent);
+                    }
+                });
             }
         });
 
         mMaria.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AutomatedActivity.this,AutomatedScriptActivity.class);
-                intent.putExtra("title","MARIA DB");
-                intent.putExtra("script","systemctl start dns.service");
-                startActivity(intent);
+                mDatabase.child("Maria").child("input").setValue("done").addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Intent intent = new Intent(AutomatedActivity.this,AutomatedScriptActivity.class);
+                        intent.putExtra("title","Maria DB");
+                        intent.putExtra("script","systemctl start dns.service");
+                        startActivity(intent);
+                    }
+                });
             }
         });
 
         mYum.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AutomatedActivity.this,AutomatedScriptActivity.class);
-                intent.putExtra("title","YUM");
-                intent.putExtra("script","systemctl start dns.service");
-                startActivity(intent);
+                mDatabase.child("Yum").child("input").setValue("done").addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Intent intent = new Intent(AutomatedActivity.this,AutomatedScriptActivity.class);
+                        intent.putExtra("title","Yum");
+                        intent.putExtra("script","systemctl start dns.service");
+                        startActivity(intent);
+                    }
+                });
             }
         });
 
         mSamba.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AutomatedActivity.this,AutomatedScriptActivity.class);
-                intent.putExtra("title","SAMBA");
-                intent.putExtra("script","systemctl start dns.service");
-                startActivity(intent);
+                mDatabase.child("Samba").child("input").setValue("done").addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Intent intent = new Intent(AutomatedActivity.this,AutomatedScriptActivity.class);
+                        intent.putExtra("title","Samba");
+                        intent.putExtra("script","systemctl start dns.service");
+                        startActivity(intent);
+                    }
+                });
             }
         });
 
         mNfs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AutomatedActivity.this,AutomatedScriptActivity.class);
-                intent.putExtra("title","NFS");
-                intent.putExtra("script","systemctl start dns.service");
-                startActivity(intent);
+                mDatabase.child("Nfs").child("input").setValue("done").addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Intent intent = new Intent(AutomatedActivity.this,AutomatedScriptActivity.class);
+                        intent.putExtra("title","Nfs");
+                        intent.putExtra("script","systemctl start dns.service");
+                        startActivity(intent);
+                    }
+                });
             }
         });
 

@@ -75,7 +75,6 @@
             android:textColor="@color/colorWhite"
             android:background="@drawable/oval_back" />
 
-
     </LinearLayout>
 
 </RelativeLayout>
